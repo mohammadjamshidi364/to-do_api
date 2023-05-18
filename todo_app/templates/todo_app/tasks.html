@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+
+
+
+
+
+
+{% block content %}
+
+    <div id="list-wrapper">
+        {% for todo in todo_items %}
+            <a href="{% url 'task' todo.id %}" >
+                
+                    <p>{{todo.name}}</p>
+
+            </a>
+        {% endfor %}
+    </div>
+
+{% endblock content %}
+    
+    
