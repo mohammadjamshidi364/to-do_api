@@ -9,11 +9,15 @@
 
     <div id="list-wrapper">
         {% for todo in todo_items %}
+
+            <a href="{% url 'delete_task' todo.id %}" > Delete </a>
+
             <a href="{% url 'task' todo.id %}" >
                 
                     <p>{{todo.name}}</p>
 
             </a>
+            <hr>
         {% endfor %}
     </div>
 

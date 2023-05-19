@@ -31,7 +31,7 @@ def createTask(request):
     return Response({"item was added "})
 
 @api_view(['POST'])
-def UpdateTask(request , pk):
+def updateTask(request , pk):
     task = Task.objects.get(id=pk)
     serializer = TaskSerializer(instance=task , data=request.data)
     if serializer.is_valid():
